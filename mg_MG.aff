@@ -16,7 +16,7 @@
 
 SET ISO8859-1
 
-TRY anyiotrmehsfkdzl'vpbg-AMjNTFIRHJSK‡VDELPBGZOÙÚ
+TRY anyiotrmehsfkdzl'vpbg-AMjNTFIRHJSK√†VDELPBGZO√¥√≤
 
 # ty vakina : https://www.chromium.org/developers/how-tos/editing-the-spell-checking-dictionaries
 # exemple : https://github.com/elastic/hunspell/blob/master/dicts/en_US/en_US.aff
@@ -56,5 +56,7 @@ SFX B   y       inay    y
 SFX B   y       intsika	y
 SFX B   y       inareo	y
 SFX B   y       in	y
+SFX C Y 1
+SFX C   ka      k√†na  ka
 SFX S Y 1
 SFX S	0	es	[sxzh]
