@@ -1,0 +1,60 @@
+# mg_MG.aff - affix file for myspell-mg
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+SET ISO8859-1
+
+TRY anyiotrmehsfkdzl'vpbg-AMjNTFIRHJSK‡VDELPBGZOÙÚ
+
+# ty vakina : https://www.chromium.org/developers/how-tos/editing-the-spell-checking-dictionaries
+# exemple : https://github.com/elastic/hunspell/blob/master/dicts/en_US/en_US.aff
+
+PFX A Y 16
+PFX A	0	m	[i]
+PFX A	0	n	[i]
+PFX A	0	h	[i]
+PFX A	0	mamp	[i]
+PFX A	0	namp	[i]
+PFX A	0	hamp	[i]
+PFX A	0	mi	[^i]
+PFX A	0	ni	[^i]
+PFX A	0	hi	[^i]
+PFX A	0	mpi	[^i]
+PFX A	0	a	[^a]
+PFX A	0	na	[^a]
+PFX A	0	ha	[^a]
+PFX A	0	mampi	[^i]
+PFX A	0	nampi	[^i]
+PFX A	0	hampi	[^i]
+PFX C Y 1
+PFX C	0	d	[r]
+SFX B Y 16
+SFX B	ka	hana	ka
+SFX B	ka	hanao	ka
+SFX B   ka      hako	ka
+SFX B   ka      hany	ka
+SFX B   ka      hanay   ka
+SFX B   ka      hantsika	ka
+SFX B   ka      hanareo	ka
+SFX B   ka      han	ka
+SFX B	y	iko	y
+SFX B   y	inao	y
+SFX B   y       iny	y
+SFX B   y       inay    y
+SFX B   y       intsika	y
+SFX B   y       inareo	y
+SFX B   y       in	y
+SFX S Y 1
+SFX S	0	es	[sxzh]
