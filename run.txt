@@ -1,0 +1,8 @@
+docker run --rm -it -v $(pwd):/home/hunspell/app -w /home/hunspell/app hunspell:ldr /bin/sh
+
+hunspell -d mg_MG
+
+wordforms mg_MG.aff mg_MG.dic adala
+
+analyze mg_MG.aff mg_MG.dic /dev/stdin
+

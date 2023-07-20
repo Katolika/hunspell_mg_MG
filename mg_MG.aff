@@ -14,49 +14,665 @@
 #   along with this program; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
-SET ISO8859-1
-
-TRY anyiotrmehsfkdzl'vpbg-AMjNTFIRHJSKàVDELPBGZOôò
 
 # ty vakina : https://www.chromium.org/developers/how-tos/editing-the-spell-checking-dictionaries
 # exemple : https://github.com/elastic/hunspell/blob/master/dicts/en_US/en_US.aff
+# ty complete tsara https://manpages.ubuntu.com/manpages/trusty/en/man4/hunspell.4.html
+#
 
-PFX A Y 16
-PFX A	0	m	[i]
-PFX A	0	n	[i]
-PFX A	0	h	[i]
-PFX A	0	mamp	[i]
-PFX A	0	namp	[i]
-PFX A	0	hamp	[i]
-PFX A	0	mi	[^i]
-PFX A	0	ni	[^i]
-PFX A	0	hi	[^i]
-PFX A	0	mpi	[^i]
-PFX A	0	a	[^a]
-PFX A	0	na	[^a]
-PFX A	0	ha	[^a]
-PFX A	0	mampi	[^i]
-PFX A	0	nampi	[^i]
-PFX A	0	hampi	[^i]
-PFX C Y 1
-PFX C	0	d	[r]
-SFX B Y 16
-SFX B	ka	hana	ka
-SFX B	ka	hanao	ka
-SFX B   ka      hako	ka
-SFX B   ka      hany	ka
-SFX B   ka      hanay   ka
-SFX B   ka      hantsika	ka
-SFX B   ka      hanareo	ka
-SFX B   ka      han	ka
-SFX B	y	iko	y
-SFX B   y	inao	y
-SFX B   y       iny	y
-SFX B   y       inay    y
-SFX B   y       intsika	y
-SFX B   y       inareo	y
-SFX B   y       in	y
-SFX C Y 1
-SFX C   ka      kàna  ka
-SFX S Y 1
-SFX S	0	es	[sxzh]
+SET UTF-8
+
+TRY aeiuonrtldspjgkmhbcyfvwzqxSNRTLCGDMPHBEAUYOFIVKWZQJX
+
+REP 2
+REP ha a
+REP a ha
+
+#MAP
+
+KEY azertyuiop|qsdfghjklmù|wxcvbn|aéz|yèu|iço|oàp|aqz|zse|edr|rft|tgy|yhu|uji|iko|olpm|qws|sxd|dcf|fvg|gbh|hnj
+
+ICONV 42
+ICONV ’ '
+ICONV ʼ '
+ICONV ﬃ ffi
+ICONV ﬄ ffl
+ICONV ﬀ ff
+ICONV ﬅ ft
+ICONV ﬁ fi
+ICONV ﬂ fl
+ICONV ﬆ st
+ICONV ſ s
+ICONV à à
+ICONV â â
+ICONV ä ä
+ICONV é é
+ICONV è è
+ICONV ê ê
+ICONV ë ë
+ICONV î î
+ICONV ï ï
+ICONV ô ô
+ICONV ö ö
+ICONV ù ù
+ICONV û û
+ICONV ü ü
+ICONV ÿ ÿ
+ICONV ç ç
+ICONV À À
+ICONV Â Â
+ICONV Ä Ä
+ICONV É É
+ICONV È È
+ICONV Ê Ê
+ICONV Ë Ë
+ICONV Î Î
+ICONV Ï Ï
+ICONV Ô Ô
+ICONV Ö Ö
+ICONV Ù Ù
+ICONV Û Û
+ICONV Ü Ü
+ICONV Ÿ Ÿ
+ICONV Ç Ç
+
+OCONV 1
+OCONV ' ’
+
+
+
+FLAG long
+
+FULLSTRIP
+
+NEEDAFFIX ()
+
+FORBIDDENWORD {}
+
+CIRCUMFIX Xx
+
+KEEPCASE ||
+
+NOSUGGEST --
+
+
+
+BREAK 5
+BREAK -
+BREAK .
+BREAK ·
+BREAK ‘
+BREAK '
+
+
+PFX Nu Y 2
+PFX Nu 0 0/Xx .
+PFX Nu 0 h/Xx .
+
+PFX Ii Y 2
+PFX Ii 0 i/Xx [aeio]
+PFX Ii 0 hi/Xx [aeio]
+
+PFX Ij Y 4
+PFX Ij 0 i/Xx [aeio]
+PFX Ij 0 ni/Xx [aeio]
+PFX Ij 0 hi/Xx [aeio]
+PFX Ij 0 ki/Xx [aeio]
+
+PFX Ma Y 4
+PFX Ma 0 man [aeio]
+PFX Ma 0 nan [aeio]
+PFX Ma 0 han [aeio]
+PFX Ma 0 kan [aeio]
+
+PFX Mb Y 5
+PFX Mb 0 m [aeio]
+PFX Mb 0 n [aeio]
+PFX Mb 0 h [aeio]
+PFX Mb 0 k [aeio]
+PFX Mb 0 f [aeio]
+
+PFX Mc Y 3
+PFX Mc 0 n [aeio]
+PFX Mc 0 h [aeio]
+PFX Mc 0 k [aeio]
+
+PFX Mi N 4
+PFX Mi 0 mi [aeio]
+PFX Mi 0 ni [aeio]
+PFX Mi 0 hi [aeio]
+PFX Mi 0 ki [aeio]
+
+PFX Mj N 4
+PFX Mj 0 mampi [aeio]
+PFX Mj 0 nampi [aeio]
+PFX Mj 0 hampi [aeio]
+PFX Mj 0 kampi [aeio]
+
+PFX Mm Y 1
+PFX Mm 0 mi/Xx [aeio]
+
+PFX Mn Y 1
+PFX Mn 0 man/Xx [aeio]
+
+PFX Mt N 1
+PFX Mt 0 m .
+
+PFX Mv Y 1
+PFX Mv 0 m/Xx .
+
+PFX Mu N 1
+PFX Mu 0 mi .
+
+SFX O1 Y 1
+SFX O1 na ko/Xx na [ahy]
+
+SFX O2 Y 3
+SFX O2 na m/Xx na [anao]
+SFX O2 na n/Xx na [anao]
+SFX O2 na nao/Xx na [anao]
+
+SFX D2 Y 6
+SFX D2 0 n/Xx [^y] [ndry]
+SFX D2 0 m/Xx [^y] [beloha]
+SFX D2 0 nao/Xx [^y] [ianao]
+SFX D2 y in/Xx y [ndry]
+SFX D2 y im/Xx y [beloha]
+SFX D2 y inao/Xx y [ianao]
+
+SFX O3 Y 1
+SFX O3 na ny/Xx na [azy]
+
+SFX D3 Y 2
+SFX D3 0 ny/Xx [^y] [izy]
+SFX D3 y iny/Xx y [izy]
+
+SFX O4 Y 1
+SFX O4 na nay/Xx na [anay]
+
+SFX O5 Y 1
+SFX O5 na ntsika/Xx na [antsika]
+
+SFX D5 Y 2
+SFX D5 0 ntsika/Xx . [isika]
+SFX D5 y intsika/Xx y [isika]
+
+SFX O6 Y 1
+SFX O6 na nareo/Xx na [anareo]
+
+SFX D6 Y 2
+SFX D6 0 nareo/Xx [^y] [ianareo]
+SFX D6 y inareo/Xx y [ianareo]
+
+PFX Ha Y 6
+PFX Ha a ha/Xx a
+PFX Ha a ka/Xx a
+PFX Ha h fah/Xx h
+PFX Ha 0 fah/Xx [a]
+PFX Ha h pah/Xx h
+PFX Ha 0 pah/Xx [a]
+
+PFX Fa Y 6
+PFX Fa 0 an/Xx .
+PFX Fa 0 nan/Xx .
+PFX Fa 0 han/Xx .
+PFX Fa 0 kan/Xx .
+PFX Fa 0 fan/Xx .
+PFX Fa 0 pan/Xx .
+
+PFX Fb Y 1
+PFX Fb 0 f/Xx .
+
+PFX Fc Y 4
+PFX Fc 0 fan/Xx .
+PFX Fc 0 pan/Xx .
+PFX Fc 0 fah/Xx .
+PFX Fc 0 pah/Xx .
+
+PFX Mg Y 4
+PFX Mg 0 ifan/Xx [aeio]
+PFX Mg 0 nifan [aeio]
+PFX Mg 0 hifan [aeio]
+PFX Mg 0 kifan [aeio]
+
+PFX Dh Y 2
+PFX Dh 0 ifan/Xx [aeio]
+PFX Dh 0 hifan/Xx [aeio]
+
+PFX Mk Y 4
+PFX Mk 0 mifan/Xx [aeio]
+PFX Mk 0 nifan [aeio]
+PFX Mk 0 hifan [aeio]
+PFX Mk 0 kifan [aeio]
+
+PFX M2 N 4
+PFX M2 0 mifamp .
+PFX M2 0 nifamp .
+PFX M2 0 hifamp .
+PFX M2 0 ifamp .
+
+PFX M3 N 4
+PFX M3 0 mifampi .
+PFX M3 0 nifampi .
+PFX M3 0 hifampi .
+PFX M3 0 ifampi .
+
+PFX M4 N 3
+PFX M4 0 nifampi/Xx .
+PFX M4 0 hifampi/Xx .
+PFX M4 0 ifampi/Xx .
+
+PFX M5 N 6
+PFX M5 0 miak/Xx .
+PFX M5 0 niak/Xx .
+PFX M5 0 hiak/Xx .
+PFX M5 0 mian/Xx .
+PFX M5 0 nian/Xx .
+PFX M5 0 hian/Xx .
+
+PFX M6 Y 4
+PFX M6 0 fifampi/Xx .
+PFX M6 0 nifampi/Xx .
+PFX M6 0 hifampi/Xx .
+PFX M6 0 ifampi/Xx .
+
+PFX Mp N 1
+PFX Mp 0 mpan .
+
+PFX Mq N 1
+PFX Mq 0 mp .
+
+PFX Tp Y 4
+PFX Tp 0 0/Xx .
+PFX Tp 0 n/Xx .
+PFX Tp 0 h/Xx .
+PFX Tp 0 k/Xx .
+
+PFX Tt N 1
+PFX Tt 0 t .
+
+PFX Fi Y 3
+PFX Fi 0 fi/Xx .
+PFX Fi 0 pi/Xx .
+PFX Fi 0 mpi/Xx .
+
+PFX Al Y 5
+PFX Al 0 ampan/Xx .
+PFX Al 0 nampan/Xx .
+PFX Al 0 hampan/Xx .
+PFX Al 0 kampan/Xx .
+PFX Al 0 fampan/Xx .
+
+PFX Am Y 5
+PFX Am 0 ampi/Xx .
+PFX Am 0 nampi/Xx .
+PFX Am 0 hampi/Xx .
+PFX Am 0 kampi/Xx .
+PFX Am 0 fampi/Xx .
+
+PFX An Y 4
+PFX An 0 ampi/Xx .
+PFX An 0 nampi/Xx .
+PFX An 0 hampi/Xx .
+PFX An 0 kampi/Xx .
+
+SFX H1 Y 6
+SFX H1 0 m/FaXx a
+SFX H1 0 n/FaXx a
+SFX H1 0 na/FaO1O2O3O4O5O6Xx a
+SFX H1 0 am/FaXx [^a]
+SFX H1 0 an/FaXx [^a]
+SFX H1 0 ana/FaO1O2O3O4O5O6Xx [^a]
+
+SFX Hb Y 3
+SFX Hb y iam/FbXx y
+SFX Hb y ian/FbXx y
+SFX Hb y iana/FbO1O2O3O4O5O6Xx y
+
+SFX He Y 3
+SFX He ina enam/FiFaXx ina
+SFX He ina enan/FiFaXx ina
+SFX He ina enana/FiFaO1O2O3O4O5O6Xx ina
+
+SFX Hg Y 7
+SFX Hg 0 0/HaXx [^y]
+SFX Hg 0 m/HaXx [^y]
+SFX Hg 0 n/HaXx [^y]
+SFX Hg 0 na/HaO1O2O3O4O5O6Xx [^y]
+SFX Hg y em/HaXx y
+SFX Hg y en/HaXx y
+SFX Hg y ena/HaO1O2O3O4O5O6Xx y
+
+SFX Hk Y 3
+SFX Hk ka ham/FaXx ka
+SFX Hk ka han/FaXx ka
+SFX Hk ka hana/FaO1O2O3O4O5O6Xx ka
+
+SFX Hl Y 6
+SFX Hl 0 m/FiXx [^y]
+SFX Hl 0 n/FiXx [^y]
+SFX Hl 0 na/FiO1O2O3O4O5O6Xx [^y]
+SFX Hl y em/FiXx y
+SFX Hl y en/FiXx y
+SFX Hl y ena/FiO1O2O3O4O5O6Xx y
+
+SFX Hm Y 3
+SFX Hm 0 m/AmXx [^y]
+SFX Hm 0 n/AmXx [^y]
+SFX Hm 0 na/AmO1O2O3O4O5O6Xx [^y]
+
+SFX Hn Y 3
+SFX Hn a in/AnXx a
+SFX Hn a im/AnXx a
+SFX Hn a ina/AnO1O2O3O4O5O6Xx a
+
+SFX Ho Y 9
+SFX Ho 0 am/FiXx [^ya]
+SFX Ho 0 an/FiXx [^ya]
+SFX Ho 0 ana/FiO1O2O3O4O5O6Xx [^ya]
+SFX Ho 0 m/FiXx a
+SFX Ho 0 n/FiXx a
+SFX Ho 0 na/FiO1O2O3O4O5O6Xx a
+SFX Ho y iam/FiIjXx y
+SFX Ho y ian/FiIjXx y
+SFX Ho y iana/FiIjO1O2O3O4O5O6Xx y
+
+SFX Vo Y 3
+SFX Vo y ivan/FiIjXx y
+SFX Vo y ivana/FiIjO1O2O3O4O5O6Xx y
+SFX Vo 0 vana/McO1O2O3O4O5O6Xx o
+
+SFX Hp Y 6
+SFX Hp 0 m/FaXx [^y]
+SFX Hp 0 n/FaXx [^y]
+SFX Hp 0 na/FaO1O2O3O4O5O6Xx [^y]
+SFX Hp y em/FaXx y
+SFX Hp y en/FaXx y
+SFX Hp y ena/FaO1O2O3O4O5O6Xx y
+
+SFX Hq Y 9
+SFX Hq aiky ekem/FiXx aiky
+SFX Hq aiky eken/FiXx aiky
+SFX Hq aiky ekena/FiO1O2O3O4O5O6Xx aiky
+SFX Hq aiky ekem/FaXx aiky
+SFX Hq aiky eken/FaXx aiky
+SFX Hq aiky ekena/FaO1O2O3O4O5O6Xx aiky
+SFX Hq aiky ekem/AmXx aiky
+SFX Hq aiky eken/AmXx aiky
+SFX Hq aiky ekena/AmO1O2O3O4O5O6Xx aiky
+
+SFX Hr Y 4
+SFX Hr y io/NuD2D3D5D6Xx y
+SFX Hr y iam y
+SFX Hr y ian y
+SFX Hr y iana/FcO1O2O3O4O5O6Xx y
+
+SFX H2 Y 4
+SFX H2 y io/IiD2D3D5D6Xx y
+SFX H2 y iam/IjXx y
+SFX H2 y ian/IjXx y
+SFX H2 y iana/IjO1O2O3O4O5O6Xx y
+
+SFX Hs N 16
+SFX Hs aiky ekem aiky
+SFX Hs aiky eken aiky
+SFX Hs aiky ekena aiky
+SFX Hs aiky ekeko aiky
+SFX Hs aiky ekenao aiky
+SFX Hs aiky ekeny aiky
+SFX Hs aiky ekentsika aiky
+SFX Hs aiky ekenay aiky
+SFX Hs aiky ekenareo aiky
+SFX Hs aiky ekeo aiky
+SFX Hs aiky ekeon aiky
+SFX Hs aiky ekeom aiky
+SFX Hs aiky ekeonao aiky
+SFX Hs aiky ekeony aiky
+SFX Hs aiky ekeontsika aiky
+SFX Hs aiky ekeonareo aiky
+
+SFX Ht Y 14
+SFX Ht 0 zy/NuXx vo
+SFX Ht 0 zim/NuXx vo
+SFX Ht 0 zin/NuXx vo
+SFX Ht 0 zina/NuO1O2O3O4O5O6Xx vo
+SFX Ht 0 zam/FaAlXx vo
+SFX Ht 0 zan/FaAlXx vo
+SFX Ht 0 zana/FaAlO1O2O3O4O5O6Xx vo
+SFX Ht ky keza/MnXx ky
+SFX Ht ky kezim/FaAlXx ky
+SFX Ht ky kezin/FaAlXx ky
+SFX Ht ky kezina/FaAlO1O2O3O4O5O6Xx ky
+SFX Ht ky kezam/FaAlXx ky
+SFX Ht ky kezan/FaAlXx ky
+SFX Ht ky kezana/FaAlO1O2O3O4O5O6Xx ky
+
+SFX Hu Y 3
+SFX Hu na mo/NuDhD2D3D5D6Xx na
+SFX Hu na mina/McO1O2O3O4O5O6Xx na
+SFX Hu na mana/McFaMgO1O2O3O4O5O6Xx na
+
+SFX Hv Y 3
+SFX Hv na m/FaXx .
+SFX Hv na n/FaXx .
+SFX Hv na na/FaO1O2O3O4O5O6Xx [^y]
+
+SFX Ke Y 5
+SFX Ke itra eto/IiAmD2D3D5D6Xx itra
+SFX Ke itra etina/NuFiIjAmO1O2O3O4O5O6Xx itra
+SFX Ke itra etam/FiIjAmXx itra
+SFX Ke itra etan/FiIjAmXx itra
+SFX Ke itra etana/FiIjAmO1O2O3O4O5O6Xx itra
+
+SFX Da Y 8
+SFX Da y iva/MmXx y
+SFX Da ka ha/MnXx ka
+SFX Da o ò/MmXx o
+SFX Da 0 y o
+SFX Da 0 in o
+SFX Da 0 im o
+SFX Da 0 y/IiXx o
+SFX Da 0 ina/IiO2O3O5O6Xx o
+
+SFX Ad Y 1
+SFX Ad ana àna/MvXx ana
+
+SFX Db N 7
+SFX Db y o y
+SFX Db y ìn y
+SFX Db y ìm y
+SFX Db y ìna y
+SFX Db y ian y
+SFX Db y iam y
+SFX Db y iana y
+
+SFX De N 1
+SFX De y e y
+
+SFX Df N 6
+SFX Df ina eno ina
+SFX Df ina enon ina
+SFX Df ina enom ina
+SFX Df ina enonao ina
+SFX Df ina enontsika ina
+SFX Df ina enonareo ina
+
+SFX Dg Y 1
+SFX Dg ina ena/MmXx ina
+
+SFX Di Y 7
+SFX Di 0 o/NuD2D3D5D6Xx .
+SFX Di 0 in .
+SFX Di 0 im .
+SFX Di 0 ina .
+SFX Di 0 in/TpXx .
+SFX Di 0 im/TpXx .
+SFX Di 0 ina/TpO1O2O3O4O5O6Xx .
+
+SFX Dj N 7
+SFX Dj y ivo y
+SFX Dj y ivon y
+SFX Dj y ivom y
+SFX Dj y ivonao y
+SFX Dj y ivony y
+SFX Dj y ivontsika y
+SFX Dj y ivonareo y
+
+SFX Dk N 1
+SFX Dk ka ho ka
+
+SFX Dl Y 7
+SFX Dl a o/IiD2D3D5D6Xx a
+SFX Dl a in/IjXx a
+SFX Dl a im/IjXx a
+SFX Dl a ina/IjXx a
+SFX Dl a an/IjXx a
+SFX Dl a am/IjXx a
+SFX Dl a ana/IjXx a
+
+SFX Dm Y 8
+SFX Dm 0 0/MmXx .
+SFX Dm 0 n/IjFiXx .
+SFX Dm 0 m/IjFiXx .
+SFX Dm 0 na/IjFiO1O2O3O4O5O6Xx .
+SFX Dm a à/MmXx a
+SFX Dm a àn/IjFiXx a
+SFX Dm a àm/IjFiXx a
+SFX Dm a àna/IjFiO1O2O3O4O5O6Xx a
+
+SFX Do Y 1
+SFX Do y ivo/IiD2D3D5D6Xx y
+
+SFX Dr Y 10
+SFX Dr tra ra/MmXx tra
+SFX Dr tra ro/IiD2D3D5D6Xx tra
+SFX Dr tra ran/IjFiXx tra
+SFX Dr tra ram/IjFiXx tra
+SFX Dr tra rana/IjFiO1O2O3O4O5O6Xx tra
+SFX Dr ka fa/MmXx ka
+SFX Dr ka fy/IiD2D3D5D6Xx ka
+SFX Dr ka fam/FiXx ka
+SFX Dr ka fan/FiXx ka
+SFX Dr ka fana/FiO1O2O3O4O5O6Xx ka
+
+SFX Dp Y 6
+SFX Dp tra ra/MmXx tra
+SFX Dp tra ra/M4Xx tra
+SFX Dp tra ro/DhD2D3D5D6Xx tra
+SFX Dp tra ran/M4Xx tra
+SFX Dp tra ram/M4Xx tra
+SFX Dp tra rana/M4O1O2O3O4O5O6Xx tra
+
+SFX Ds N 14
+SFX Ds ky kezo ky
+SFX Ds ky kezom ky
+SFX Ds ky kezon ky
+SFX Ds ky kezonao ky
+SFX Ds ky kezony ky
+SFX Ds ky kezontsika ky
+SFX Ds ky kezonareo ky
+SFX Ds ka fy ka
+SFX Ds ka fim ka
+SFX Ds ka fin ka
+SFX Ds ka finao ka
+SFX Ds ka finy ka
+SFX Ds ka fintsika ka
+SFX Ds ka finareo ka
+
+SFX Dt Y 1
+SFX Dt a o/NuD2D3D5D6Xx a
+
+SFX Dv Y 1
+SFX Dv 0 o/NuD2D3D5D6Xx .
+
+SFX Sa Y 4
+SFX Sa y aso/NuD2D3D5D6Xx y
+SFX Sa y asam/FiM6Xx y
+SFX Sa y asan/FiM6Xx y
+SFX Sa y asana/FiIjM6O1O2O3O4O5O6Xx y
+
+SFX Tj N 17
+SFX Tj y in y
+SFX Tj y im y
+SFX Tj y ina y
+SFX Tj y iko y
+SFX Tj y inao y
+SFX Tj y iny y
+SFX Tj y intsika y
+SFX Tj y inay y
+SFX Tj y inareo y
+SFX Tj y ian y
+SFX Tj y iam y
+SFX Tj y iana y
+SFX Tj y iako y
+SFX Tj y ianao y
+SFX Tj y iany y
+SFX Tj y iantsika y
+SFX Tj y ianay y
+
+SFX Ta! N 1
+SFX Ta! 0 o .
+
+SFX Ra Y 1
+SFX Ra a ana a
+
+SFX Ag N 15
+SFX Ag na m na
+SFX Ag na ko na
+SFX Ag 0 o a
+SFX Ag a y a
+SFX Ag 0 y a
+SFX Ag na ntsika na
+SFX Ag ka tsika ka
+SFX Ag 0 reo a
+SFX Ag tra tr tra
+SFX Ag tra tro tra
+SFX Ag tra tsika tra
+SFX Ag tra ny tra
+SFX Ag ka k ka
+SFX Ag ka ko ka
+SFX Ag ka ny ka
+
+SFX Aj N 16
+SFX Aj 0 m [^y]
+SFX Aj 0 n [^y]
+SFX Aj 0 ko [^y]
+SFX Aj 0 nao [^y]
+SFX Aj 0 ny [^y]
+SFX Aj 0 ntsika [^y]
+SFX Aj 0 nay [^y]
+SFX Aj 0 nareo [^y]
+SFX Aj y im y
+SFX Aj y in y
+SFX Aj y iko y
+SFX Aj y inao y
+SFX Aj y iny y
+SFX Aj y intsika y
+SFX Aj y inay y
+SFX Aj y inareo y
+
+SFX Ak Y 8
+SFX Ak na n/FiXx na
+SFX Ak na m/FiXx na
+SFX Ak na ko/FiXx na
+SFX Ak a ao/FiXx a
+SFX Ak a y/FiXx a
+SFX Ak a tsika/FiXx n
+SFX Ak a ay/FiXx a
+SFX Ak a areo/FiXx a
+
+SFX Ap N 4
+SFX Ap 0 m [aoie]
+SFX Ap 0 n [aoie]
+SFX Ap y im y
+SFX Ap y in y
+
+SFX As N 2
+SFX As na n na
+SFX As na m na
+
+SFX At N 1
+SFX At aka a aka
+
+SFX Ky N 1
+SFX Ky a y a
